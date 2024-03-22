@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 36px;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.X {
+    color: #3498db; /* Blue for X */
+}
+
+.cell.O {
+    color: #9b59b6; /* Purple for O */
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.result-screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #9b59b6, #3498db);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.result-screen p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Add this to the existing CSS */
+
+.result-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    color: #3498db;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px; 
+}
+
