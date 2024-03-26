@@ -21,7 +21,7 @@ function cellClicked(index) {
             document.getElementById('result-message').innerText = `Player ${currentPlayer} wins!`;
             document.getElementById('result-screen').style.display = 'flex';
         } else if (board.every(cell => cell !== '')) {
-            document.getElementById('result-message').innerText = "It's a draw!";
+            document.getElementById('result-message').innerText = "Ada Ommala!";
             document.getElementById('result-screen').style.display = 'flex';
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
