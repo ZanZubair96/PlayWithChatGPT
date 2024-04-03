@@ -1,0 +1,51 @@
+body {
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('path/to/howard-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #800000; /* Dark Red - Hogwarts House Colors */
+}
+
+/* Additional Harry Potter-themed styling can be added here */
