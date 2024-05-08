@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextileVisualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TextileVisualizer</h1>
+    </header>
+    <main>
+        <main>
+            <section id="registration-section">
+                <h2>User Registration</h2>
+                <form id="registration-form">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit" id="signup">Register</button>
+                </form>
+            </section>
+            <section id="login-section">
+                <h2>User Login</h2>
+                <form id="login-form">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="login-username" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                    <button type="submit" id="login-submit" >Login</button>
+                </form>
+            </section>
+        </main>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 TextileVisualizer</p>
+    </footer>
+    <script src="scripts.js"></script>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDVI0VOg_mtk-RlYkYxrmfnDhJnAH6ddhc",
+    authDomain: "textilevisualizer.firebaseapp.com",
+    databaseURL: "https://textilevisualizer-default-rtdb.firebaseio.com",
+    projectId: "textilevisualizer",
+    storageBucket: "textilevisualizer.appspot.com",
+    messagingSenderId: "121265509182",
+    appId: "1:121265509182:web:750e2a1b1ad01757e3126f",
+    measurementId: "G-HKQXJ895V7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signup.addEventListener('click', (e) => {
+
+    var email = document.getElementById('email').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+
+    createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+
+    set(ref(database, 'users/' + user.uid),{
+        username: username,
+        email: email
+    })
+
+    alert('user created!')
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
+    // ..
+  });
+
+  });
+</script>
+</body>
+</html>
