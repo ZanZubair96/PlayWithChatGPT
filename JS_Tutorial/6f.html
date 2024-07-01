@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Head or Tails</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Head or Tails</h2>
+  <p>Come on !!!</p>
+  <button onclick="
+    const randomValue = Math.random();
+    console.log(randomValue);
+    let result = '';
+    if(randomValue >= 0 && randomValue <=1/2)
+    {
+      result = 'Head';
+    }else {
+      result = 'Tail';
+    }
+    alert(`The result is ${result}`);
+  ">Fill the Coin</button>
+  
+  
+</body>
+</html>
