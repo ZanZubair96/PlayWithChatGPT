@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Time of the day</title>
+</head>
+<body>
+ <script>
+  const now = new Date();
+  let time = now.getHours();
+  const name = 'Zubair';
+  // console.log(time);
+
+  if(time >=6 && time<=12){
+    console.log(`Good Morning!! ${name}`);
+  }else if(time >=13 && time<=17){
+    console.log(`Good Afternoon!! ${name}`);
+  }else{
+    console.log(`Good Night!! ${name}`)
+  }
+ </script>
+  
+</body>
+</html>

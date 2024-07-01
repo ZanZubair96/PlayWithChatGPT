@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Head or Tails</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Head or Tails</h2>
+  <p>come on!!!</p>
+  <button onclick="
+    const guess='Tail'
+    const randomValue = Math.random();
+    // console.log(randomValue);
+    let result = '';
+    result = (randomValue >= 0 && randomValue <= 1/2) ? 'Head' : 'Tail';
+    alert((guess === result) 
+      ? `You guess is right, you won!!! \nThe toss is ${result}` 
+      : `You guess is wrong, you lost!!! \nThe toss is ${result}`);
+  ">Your Guess</button>
+</body>
+</html>
