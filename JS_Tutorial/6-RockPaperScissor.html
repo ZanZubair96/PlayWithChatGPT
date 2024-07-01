@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock-Paper-Scissor</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rock-Paper-Scissor</h2>
+  <p>Choose your move</p>
+  <button onclick="
+    const randomValue = Math.random();
+    let result = '';
+    let computerMove = '';
+
+    if(randomValue >=0 && randomValue<=1/3)
+    {
+      computerMove = 'Rock'
+      result = 'Tie!';
+    }else if(randomValue > 1/3 && randomValue <=2/3){
+      computerMove = 'Paper'
+      result = 'Lose!';
+    }else if(randomValue > 2/3 && randomValue <=1){
+      computerMove = 'Scissor'
+      result = 'Win!';
+    }
+    alert(`You ${result} \nYour move is Rock and the computer move is ${computerMove}`)
+  ">Rock</button>
+
+  <button onclick="
+    const randomValue = Math.random();
+    let result = '';
+    let computerMove = '';
+    if(randomValue >=0 && randomValue<=1/3)
+    {
+      computerMove = 'Rock'
+      result = 'Win!';
+    }else if(randomValue > 1/3 && randomValue <=2/3){
+      computerMove = 'Paper'
+      result = 'Tie!';
+    }else if(randomValue > 2/3 && randomValue <=1){
+      computerMove = 'Scissor'
+      result = 'Lose!';
+    }
+    alert(`You ${result} \nYour move is Paper and the computer move is ${computerMove}`)
+  ">Paper</button>
+
+  <button onclick="
+    const randomValue = Math.random();
+    let result = '';
+    let computerMove = '';
+    if(randomValue >=0 && randomValue<=1/3)
+    {
+      computerMove = 'Rock'
+      result = 'Lose!';
+    }else if(randomValue > 1/3 && randomValue <=2/3){
+      computerMove = 'Paper'
+      result = 'Win!';
+    }else if(randomValue > 2/3 && randomValue <=1){
+      computerMove = 'Scissor'
+      result = 'Tie!';
+    }
+    alert(`You ${result} \nYour move is Scissor and the computer move is ${computerMove}`)
+  ">Scissor</button>
+</body>
+</html>
