@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock-Paper-Scissor</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rock-Paper-Scissor</h2>
+  <p>Choose your move</p>
+  <button onclick="
+    playYourMove('Rock');
+  ">Rock</button>
+
+  <button onclick="
+    playYourMove('Paper');
+  ">Paper</button>
+
+  <button onclick="
+    playYourMove('Scissor');
+  ">Scissor</button>
+
+  <script>
+    function pickComputerMove(){
+      const randomValue = Math.random();
+      let computerMove = '';
+      if(randomValue >=0 && randomValue<=1/3)
+      {
+        computerMove = 'Rock';
+      }else if(randomValue > 1/3 && randomValue <=2/3){
+        computerMove = 'Paper';
+      }else if(randomValue > 2/3 && randomValue <=1){
+        computerMove = 'Scissor';
+      }
+      return computerMove;
+    }
+
+    function playYourMove(playerMove){
+      let result = '';
+      let computerMove = pickComputerMove();
+      if(playerMove === 'Rock'){
+        if(computerMove === 'Rock'){
+          result = 'Tie!!';
+        } else if(computerMove === 'Paper'){
+          result = 'Lose!!';
+        } else if(computerMove === 'Scissor'){
+          result = 'Win!!';
+        }
+      } else if(playerMove === 'Paper'){
+        if(computerMove === 'Rock'){
+          result = 'Win!!';
+        } else if(computerMove === 'Paper'){
+          result = 'Tie!!';
+        } else if(computerMove === 'Scissor'){
+          result = 'Lose!!';
+        }
+      } else if(playerMove === 'Scissor'){
+        if(computerMove === 'Rock'){
+          result = 'Lose!!';
+        } else if(computerMove === 'Paper'){
+          result = 'Win!!';
+        } else if(computerMove === 'Scissor'){
+          result = 'Tie!!';
+        }
+      }
+
+      alert(`You ${result} \nYour move is ${playerMove} and the computer move is ${computerMove}`)
+    }
+    
+
+  </script>
+</body>
+</html>
