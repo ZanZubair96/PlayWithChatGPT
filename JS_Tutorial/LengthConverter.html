@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>Length Converter</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to){
+      if(from ==='km' && to ==='miles'){
+        let len = length * 1.6;
+        return len + ' km';
+      }else if(from ==='miles' && to ==='km'){
+        let len = length / 1.6;
+        return len + ' miles';
+      }else if(from ==='km' && to ==='km'){
+        let len = length;
+        return len + ' km';
+      }else{
+        return 'Please check the Value';
+      }
+    }
+    console.log(convertLength(50, 'km', 'miles'));
+    console.log(convertLength(32, 'miles', 'km'));
+    console.log(convertLength(50, 'km', 'km'));
+    console.log(convertLength(50, 'ksdam', 'miles'));
+  </script>
+
+  
+  
+  
+</body>
+</html>
