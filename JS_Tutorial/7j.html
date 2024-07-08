@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <p>Calculator</p>
+  <p>
+    <button onclick="calc('1');">1</button>
+    <button onclick="calc('2');">2</button>  
+    <button onclick="calc('3');">3</button>
+    <button onclick="calc('+');">+</button>
+  </p>
+
+  <p>
+    <button onclick="calc('4');">4</button>
+    <button onclick="calc('5');">5</button>  
+    <button onclick="calc('6');">6</button>
+    <button onclick="calc('-');">-</button>
+  </p>
+
+  <p>
+    <button onclick="calc('7');">7</button>
+    <button onclick="calc('8');">8</button>  
+    <button onclick="calc('9');">9</button>
+    <button onclick="calc('*');">*</button>
+  </p>
+
+  <p>
+    <button onclick="calc('0');">0</button>  
+    <button onclick="calc('.');">.</button>
+    <button onclick="calc('/');">/</button>
+    <button onclick="
+      calculation = eval(calculation);
+      console.log(calculation)
+    ">=</button>
+  </p>
+
+  <button onclick="
+    calculation = '';
+    console.log('Cleared');
+  ">Clear</button>
+   
+  <script>
+    function calc(value){
+      calculation += value;
+      console.log(calculation);
+    }
+    let calculation = "";
+  </script> 
+</body>
+</html>

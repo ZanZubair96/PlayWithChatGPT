@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>Length Converter</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to){
+      if(from ==='km' && to ==='miles'){
+        let len = length * 1.6;
+        return len + ' km';
+      }else if(from ==='miles' && to ==='km'){
+        let len = length / 1.6;
+        return len + ' miles';
+      }else if(from ==='km' && to ==='km'){
+        let len = length;
+        return len + ' km';
+      }else if(from ==='km' && to ==='ft'){
+        let len = length * 3281;
+        return len + ' ft';
+      }else if(from ==='miles' && to ==='ft'){
+        let len = length * 5280;
+        return len + ' ft';
+      }else{
+        return  `invalid unit: ${from}`;
+      }
+    }
+    console.log(convertLength(50, 'km', 'miles'));
+    console.log(convertLength(32, 'miles', 'km'));
+    console.log(convertLength(50, 'km', 'km'));
+    console.log(convertLength(5, 'km', 'ft'));
+    console.log(convertLength(50, 'miles', 'ft'));
+    console.log(convertLength(50, 'ksdam', 'miles'));
+  </script>
+
+  
+  
+  
+</body>
+</html>
