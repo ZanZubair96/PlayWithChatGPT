@@ -21,7 +21,7 @@
         let len = length * 5280;
         return len + ' ft';
       }else{
-        return 'Please check the Value';
+        return  `invalid unit: ${from}`;
       }
     }
     console.log(convertLength(50, 'km', 'miles'));
