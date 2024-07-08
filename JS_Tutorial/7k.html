@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart Quantity</title>
+</head>
+<body>
+  <p>
+    Cart Quantity
+  </p>
+  <button onclick="
+   console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+
+  <button onclick="cartQuantityFn(1);">Add to Cart</button>
+
+  <button onclick="cartQuantityFn(2);">+2</button>
+
+  <button onclick="cartQuantityFn(3);">+3</button>
+
+  <button onclick="cartQuantityFn(4);">+4</button>
+
+  <button onclick="cartQuantityFn(5);">+5</button>
+
+  <button onclick="
+    if(cartQuantity <= 0) {
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    } else{
+      cartQuantityFn(-2);
+    };
+  ">-2</button>
+
+  <button onclick="
+    if(cartQuantity <= 0){
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    } else{
+      cartQuantityFn(-3);
+    };
+  ">-3</button>
+
+  <button onclick="
+    if(cartQuantity == 0){
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    } else{
+     cartQuantityFn(-1);
+    };
+  ">Remove from cart</button>
+
+  <button onclick="
+    if(cartQuantity == 0){
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    } else{
+      cartQuantity --;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    };
+  ">Remove from cart</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Reset Cart</button>
+  <script>
+    let cartQuantity = 0;
+    function cartQuantityFn(value = cartQuantity){
+      cartQuantity = cartQuantity + value;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+  </script>
+</body>
+</html>
