@@ -1,0 +1,82 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.history-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.history-button:hover {
+  background-color: #ff4e42;
+}
+
+.back-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-button:hover {
+  background-color: #ff4e42;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4e42;
+}
+
+div {
+  margin: 10px 0;
+}
