@@ -61,6 +61,10 @@
   <script>
     let cartQuantity = 0;
     function cartQuantityFn(value = cartQuantity){
+      if(cartQuantity >= 5){
+        alert('The cart is full');
+        return;
+      }
       cartQuantity = cartQuantity + value;
       console.log(`Cart Quantity: ${cartQuantity}`);
     }
