@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Object</title>
+</head>
+<body>
+  <script>
+    const product1 = {
+      name: 'BasketBall',
+      price: 1800
+    }
+    const product2 = {
+      name: 'Volleyball',
+      price: 1800
+    }
+
+    function isSameProduct(){
+      const keys1 = Object.keys(product1);
+      const keys2 = Object.keys(product2);
+
+      if (keys1.length !== keys2.length) {
+        return false;
+      }
+      // console.log(key1);
+      for (let key of keys1) {
+      if (product1[key] !== product2[key]) {
+        return false;
+      }
+      }
+      return true;
+    }
+    console.log(isSameProduct());
+
+  </script>
+
+</body>
+</html>
