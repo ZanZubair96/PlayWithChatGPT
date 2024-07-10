@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Objects</title>
+</head>
+<body>
+  <script>
+    const product1 = {
+      name: 'BasketBall',
+      price: 2095
+    }
+    const product2 = {
+      name: 'VolleyBall',
+      price: 1800
+    }
+    function comparePrice(){
+      if(product1.price < product2.price){
+        console.log(`The Product1 price is lowest: ${product1.price} while the price of the Product2 is: ${product2.price} `)
+      }else{
+        console.log(`The Product2 price is lowest: ${product2.price} while the price of the Product1 is: ${product1.price}`)
+      }
+    }
+
+    comparePrice();
+
+    
+  </script>
+
+</body>
+</html>
