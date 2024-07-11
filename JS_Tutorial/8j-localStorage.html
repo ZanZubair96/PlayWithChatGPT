@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Head or Tails</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Head or Tails</h2>
+  <p>come on!!!</p>
+
+  <button onclick="
+    guess = 'Head';
+    guessTheToss();
+  ">Head</button>
+
+  <button onclick="
+    guess = 'Tail'
+    guessTheToss();
+  ">Tail </button>
+
+  <script>
+    const score = JSON.parse(localStorage.getItem('score'))
+
+    let guess='';
+
+    function guessTheToss(){
+      const randomValue = Math.random();
+      let result = '';
+      result = (randomValue >= 0 && randomValue <= 1/2) ? 'Head' : 'Tail';
+      alert((guess === result) 
+        ? `You guess is right, you won!!! \nThe toss is ${result}`
+        
+        : `You guess is wrong, you lost!!! \nThe toss is ${result}`);
+      
+      if(result !== guess){
+        score.losses += 1;
+      } else{
+        score.wins += 1;
+      }
+
+     localStorage.setItem('score', JSON.stringify(score));
+      console.log(score);
+  }
+
+  
+  </script>
+</body>
+</html>
