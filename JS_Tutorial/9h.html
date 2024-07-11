@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <title>Dom</title>
+</head>
+<body>
+  <input placeholder="Type Something" 
+    onkeyup="onKeyUpfn(event)">
+
+  <p class="js-typing"></p>
+
+  <script>
+    function onKeyUpfn(event){
+      document.querySelector('.js-typing')
+      .innerHTML = document.querySelector('input').value;
+    }
+  </script>
+  
+</body>
+</html>
