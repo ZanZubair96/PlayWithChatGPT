@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <title>Input</title>
+</head>
+<body>
+  <input placeholder="Name">
+  <button onclick="displayName();">Submit</button>
+  <p class="js-name"></p>
+
+  <script>
+    function displayName(){
+      const text = document.querySelector('input').value;
+      if(text===''){
+        document.querySelector('.js-name').innerHTML = 'Please enter your name';
+      }else{
+        document.querySelector('.js-name').innerHTML = `Your name is: ${text}`;
+      }
+    }
+  </script>
+  
+</body>
+</html>
