@@ -3,11 +3,20 @@
   <title>Input</title>
 </head>
 <body>
-  <input placeholder="Name">
+  <input placeholder="Name" onkeydown="
+    onKeyEnterDisplayName(event);
+    ">
   <button onclick="displayName();">Submit</button>
   <p class="js-name"></p>
 
   <script>
+
+    function onKeyEnterDisplayName(event){
+      if(event.key === 'Enter'){
+      displayName();
+      }
+    }
+    
     function displayName(){
       const text = document.querySelector('input').value;
       if(text===''){
