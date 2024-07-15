@@ -1,0 +1,37 @@
+body{
+  font-family: arial;
+}
+
+.gaming-button{
+  font-size: 20px;
+  /* font-weight: bold; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.music-button{
+  font-size: 20px;
+  /* font-weight: bold; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tech-button{
+  font-size: 20px;
+  /* font-weight: bold; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.is-toggled{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
