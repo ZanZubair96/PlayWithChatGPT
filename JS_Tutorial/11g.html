@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>Playing with while loop</title>
+</head>
+<body>
+  <script>
+  const nums = ['1', '3', '5'];
+  const nums1 = [-2, -1, 0, 100];
+
+  let twiceArray = [];
+  addByOne(nums);
+  addByOne(nums1);
+
+  
+
+  function addByOne(array){
+   let lastIndex = array.length-1;
+   for(let i=0; i <= lastIndex; i++){
+    twiceArray.push(Number(array[i]) +  1);
+   }
+   console.log(twiceArray);
+   twiceArray = [];
+  }
+    
+
+  </script>
+</body>
+</html>
