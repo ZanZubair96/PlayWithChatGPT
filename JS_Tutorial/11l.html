@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>Min Max</title>
+</head>
+<body>
+  <script>
+  const nums = [1, -2, 5];
+  const nums1 = [1, 1, 5];
+  const nums2 = [3];
+  
+  minMax(nums2);
+
+  function minMax(array){
+     const result = {
+      min: array[0],
+      max: array[0]
+     };
+
+     let lastIndex = array.length-1;
+     for(let i=0; i <= lastIndex; i++){
+      if(array[i] < result.min){
+        result.min = array[i];
+      }
+      
+      if (array[i] > result.max ){
+        result.max = array[i]; 
+     } 
+     }
+     console.log(result.max);
+     console.log(result.min);
+
+  }
+
+  </script>
+</body>
+</html>
