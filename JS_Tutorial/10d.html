@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Turn On</title>
+  <style>
+    body{
+      font-family: arial;
+    }
+
+    .gaming-button{
+      font-size: 20px;
+      /* font-weight: bold; */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .is-toggled{
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      /* font-weight: bold; */
+    }
+  </style>
+</head>
+<body>
+  <button class="gaming-button" onclick="
+    gamingToggles();
+    ">Gaming</button>
+
+  <script>
+    function gamingToggles(){
+      if(document.querySelector('.gaming-button').classList.contains('is-toggled')){
+        document.querySelector('.gaming-button').classList.remove('is-toggled');
+      }else {
+        document.querySelector('.gaming-button').classList.add('is-toggled');
+      }
+      
+    }
+  </script>
+  
+</body>
+</html>
