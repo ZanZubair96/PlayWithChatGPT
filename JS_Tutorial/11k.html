@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>Add Two Arrays</title>
+</head>
+<body>
+  <script>
+  const nums = [1, -2, 5];
+  const nums1 = [1, 1, 5];
+  
+  greaterThanZeroCheck(nums);
+
+  function greaterThanZeroCheck(array){
+     let countZero = 0;
+     let lastIndex = array.length-1;
+     for(let i=0; i <= lastIndex; i++){
+      if(array[i]>0){
+        countZero++;
+      }
+     }
+     console.log(countZero);
+  }
+
+  </script>
+</body>
+</html>
