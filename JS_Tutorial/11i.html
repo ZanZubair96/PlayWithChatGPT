@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <title>Playing with Array & loop</title>
+</head>
+<body>
+  <script>
+  const nums = [1, 3, 5];
+  const nums1 = [-2, -1, 0, 100];
+  
+  addNums(nums, 3);
+  addNums(nums1, 5);
+
+  function addNums(array, num){
+   let addArrayWithNum = [];
+   let lastIndex = array.length-1;
+   for(let i=0; i <= lastIndex; i++){
+    addArrayWithNum.push(Number(array[i]) +  num);
+   }
+   console.log(addArrayWithNum);
+  }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>Add Two Arrays</title>
+</head>
+<body>
+  <script>
+  const nums = [1, 3, 5];
+  const nums1 = [1, 1, 5];
+  
+  addNums(nums, nums1);
+
+  function addNums(array_1, array_2){
+   if(array_1.length == array_2.length){
+     let addThe2Array = [];
+     let lastIndex = array_1.length-1;
+     for(let i=0; i <= lastIndex; i++){
+      addThe2Array.push(array_1[i] +  array_2[i]);
+     }
+     console.log(addThe2Array);
+   }else {
+    console.log(`Please provide the even number of values in the Array`);
+   }
+
+  }
+
+  </script>
+</body>
+</html>
