@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f7c948;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.circle-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.capture-box {
+  width: 200px;
+  height: 200px;
+  background-color: #0e1e41;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.capture-text {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
