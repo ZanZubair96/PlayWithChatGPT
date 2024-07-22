@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Customer Image</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">&#8592;</button>
+        <div class="capture-box">
+            <input type="file" accept="image/*" id="fileInputCustomer" capture="user" style="display: none;">
+            <button class="capture-text" onclick="captureCustomerImage()">Capture Customer Image</button>
+        </div>
+    </div>
+    <script>
+        function captureCustomerImage() {
+            document.getElementById('fileInputCustomer').click();
+        }
+
+        document.getElementById('fileInputCustomer').onchange = function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    localStorage.setItem('customerImage', e.target.result);
+                    window.location.href = 'displayCustomerImg.html';
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
