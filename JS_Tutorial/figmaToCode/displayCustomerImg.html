@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Customer Image</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="goBack()">&#8592;</button>
+        <div class="image-container">
+            <img id="displayCustomerImage" alt="Customer Image">
+        </div>
+        <p class="caption">Preview of the Customer</p>
+        <div class="button-container">
+            <button class="next-button" onclick="finish()">Finish</button>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            const imageData = localStorage.getItem('customerImage');
+            if (imageData) {
+                document.getElementById('displayCustomerImage').src = imageData;
+            }
+        };
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function finish() {
+            alert('Process Completed!');
+            // Implement the action for finishing the process
+        }
+    </script>
+</body>
+</html>

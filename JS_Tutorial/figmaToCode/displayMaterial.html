@@ -8,16 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Captured Image</h1>
-        <img id="displayImage" alt="Captured Image">
+        <button class="back-button" onclick="goBack()">&#8592;</button>
+        <div class="image-container">
+            <img id="displayImage" alt="Captured Image">
+        </div>
+        <p class="caption">Preview of the Material</p>
+        <div class="button-container">
+            <button class="add-more-button" onclick="addMore()">Add More</button>
+            <button class="next-button" onclick="goNext()">Next</button>
+        </div>
     </div>
-    <script>
-        window.onload = function() {
-            const imageData = localStorage.getItem('capturedImage');
-            if (imageData) {
-                document.getElementById('displayImage').src = imageData;
-            }
-        };
-    </script>
+    <script src="scripts/displayMaterial.js"></script>
 </body>
 </html>

@@ -14,6 +14,6 @@ function addMore() {
 }
 
 function goNext() {
-  // Implement the action for the next button
-  alert('Next button clicked!');
+  // Navigate to the customer capture page
+  window.location.href = 'customerImageCapture.html'; 
 }

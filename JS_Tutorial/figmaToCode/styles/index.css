@@ -34,7 +34,7 @@ body {
   margin-bottom: 20px;
 }
 
-#displayImage {
+#displayImage, #displayCustomerImage {
   width: 100%;
   max-width: 300px;
   height: auto;
@@ -62,24 +62,12 @@ body {
   cursor: pointer;
 }
 
-.add-more-button {
-  display: flex;
-  align-items: center;
-}
-
 .add-more-button::before {
-  content: '+';
-  margin-right: 8px;
-}
-
-.next-button {
-  display: flex;
-  align-items: center;
+  content: '+ ';
 }
 
 .next-button::after {
-  content: '→';
-  margin-left: 8px;
+  content: ' →';
 }
 
 h1 {
