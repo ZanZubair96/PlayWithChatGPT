@@ -9,9 +9,10 @@
 <body>
     <div class="container">
         <button class="back-button" onclick="goBack()">&#8592;</button>
-        <div class="capture-box">
+        <div class="capture-box" onclick="captureCustomerImage()">
+            <span class="capture-text">Capture Customer Image</span>
             <input type="file" accept="image/*" id="fileInputCustomer" capture="user" style="display: none;">
-            <button class="capture-text" onclick="captureCustomerImage()">Capture Customer Image</button>
+            
         </div>
     </div>
     <script>
