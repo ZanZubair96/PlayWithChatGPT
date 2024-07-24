@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    const colors = ['red', 'green', 'yellow', 'red', 'green', 'red'];
+
+    function searchInArray(array, strSearch){
+      for( let i=0; i<array.length; i++){
+        if(array[i] === strSearch ){
+          return i;
+        }
+      }
+          return -1;
+    }
+
+    function uniqueArr(array){
+      const result = [];
+      for(let i=0; i<array.length; i++)
+      {
+        if(searchInArray(result, array[i]) === -1){
+          result.push(array[i]);
+        }
+      } 
+      console.log(result)
+    }
+
+    uniqueArr(colors);
+   
+ </script>
+  
+</body>
+</html>
