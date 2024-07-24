@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function searchInArray(array, strSearch){
+      let temp = -1;
+      for( let i=0; i<array.length; i++){
+      if(array[i] === strSearch){
+        temp = i;
+        break;
+      }
+      }
+      console.log(temp);
+    }
+
+    const arr = ['Hello','World','See', 'Search'];
+    const arr1 = ['Hello','World','Not', 'Found'];
+
+    searchInArray(arr1, 'Not');    
+  </script>
+  
+</body>
+</html>
