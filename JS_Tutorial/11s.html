@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const updatedOrder = [];
+    const foods = ['semiya', 'egg', 'potato', 'egg', 'chips', 'egg'];
+    let count = 0;
+
+    for(let i=0; i<foods.length; i++)
+    {
+      if(foods[i] !== 'egg'){
+        updatedOrder.push(foods[i]);
+      }else{
+        count ++;
+        if(count == 2){
+          updatedOrder.push(foods[i]);
+        }
+      }
+    } 
+    console.log(updatedOrder);
+ </script>
+  
+</body>
+</html>
