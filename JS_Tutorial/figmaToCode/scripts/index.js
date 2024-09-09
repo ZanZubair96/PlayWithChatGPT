@@ -75,4 +75,5 @@ function processImage(file) {
         window.location.href = 'displayMaterial.html';
     };
     reader.readAsDataURL(file);
-}
+} 
+
