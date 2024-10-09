@@ -1,23 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import CategoryGrid from './components/CategoryGrid';
-import CategoryView from './components/CategoryView';
-import ContactView from './components/ContactView';
-import './App.css';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Category from './pages/Category';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<CategoryGrid />} />
-            <Route path="/category/:category" element={<CategoryView />} />
-            <Route path="/category/:category/contact/:contactId" element={<ContactView />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:categoryId" element={<Category />} />
+          <Route path="/contact/:contactId" element={<Contact />} />
+        </Routes>
+        <Footer />
       </div>
     </Router>
   );
