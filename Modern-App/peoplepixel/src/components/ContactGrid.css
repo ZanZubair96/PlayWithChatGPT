@@ -1,0 +1,20 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.add-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  cursor: pointer;
+}
+
+.add-contact .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "id": "family",
+      "name": "Family",
+      "icon": "📁"
+    },
+    {
+      "id": "friends",
+      "name": "Friends",
+      "icon": "📁"
+    },
+    {
+      "id": "office",
+      "name": "Office",
+      "icon": "📁"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1728464676455,
+      "name": "Zan",
+      "photo": "👤",
+      "category": "family",
+      "todos": [
+        "come to home"
+      ],
+      "reminders": [
+        "book ride @3pm"
+      ],
+      "finances": [
+        {
+          "description": "Driver Auto",
+          "amount": "240"
+        }
+      ]
+    },
+    {
+      "id": 1728467649279,
+      "name": "Rasiq",
+      "photo": "👤",
+      "category": "office",
+      "todos": [],
+      "reminders": [],
+      "finances": []
+    },
+    {
+      "id": 1728467969588,
+      "name": "dsad",
+      "photo": "👤",
+      "category": "family",
+      "todos": [],
+      "reminders": [],
+      "finances": []
+    },
+    {
+      "id": 1728468289460,
+      "name": "Mouli",
+      "photo": "👤",
+      "category": "family",
+      "todos": [],
+      "reminders": [],
+      "finances": []
+    }
+  ]
+}

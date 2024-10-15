@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShariaStock</title>
+    <style>
+        :root {
+            --primary: #00A86B;
+            --secondary: #FFD700;
+            --accent: #003366;
+            --background: #F5F5F5;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
+            --info: #17A2B8;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-dark);
+        }
+        .header {
+            background-color: var(--accent);
+            color: var(--text-light);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: var(--text-light);
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 200px;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--text-dark);
+        }
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .stocks-list {
+            flex: 3;
+        }
+        .sidebar {
+            flex: 1;
+        }
+        .stock-item {
+            background-color: var(--text-light);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stock-name {
+            font-weight: bold;
+        }
+        .stock-price {
+            color: var(--text-dark);
+        }
+        .stock-change.positive {
+            color: var(--success);
+        }
+        .stock-change.negative {
+            color: var(--danger);
+        }
+        .stock-status {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .stock-status.halal {
+            background-color: var(--success);
+            color: var(--text-light);
+        }
+        .stock-status.doubtful {
+            background-color: var(--warning);
+            color: var(--text-dark);
+        }
+        .market-overview {
+            background-color: var(--accent);
+            color: var(--text-light);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: var(--accent);
+            color: var(--text-light);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+        .footer-section ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .newsletter input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SHARIA STOCK</div>
+        <nav class="nav-menu">
+            <a href="#">DISCOVER</a>
+            <a href="#">STOCKS</a>
+            <a href="#">PORTFOLIO</a>
+            <a href="#">MORE</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="SEARCH FOR A COMPANY">
+            <img src="/api/placeholder/20/20" alt="Search Icon">
+        </div>
+        <div class="auth-buttons">
+            <button class="btn btn-primary">LOGIN</button>
+            <button class="btn btn-secondary">SIGNUP</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="stocks-list">
+            <h2>STOCKS</h2>
+            <div class="stock-item">
+                <div>
+                    <div class="stock-name">Amazon.com Inc</div>
+                    <div class="stock-price">$987.55</div>
+                </div>
+                <div>
+                    <div class="stock-change positive">+0.07%</div>
+                    <span class="stock-status halal">Halal</span>
+                </div>
+            </div>
+            <div class="stock-item">
+                <div>
+                    <div class="stock-name">Apple Inc.</div>
+                    <div class="stock-price">$141.95</div>
+                </div>
+                <div>
+                    <div class="stock-change negative">-0.65%</div>
+                    <span class="stock-status halal">Halal</span>
+                </div>
+            </div>
+            <div class="stock-item">
+                <div>
+                    <div class="stock-name">NVIDIA Group</div>
+                    <div class="stock-price">$386.90</div>
+                </div>
+                <div>
+                    <div class="stock-change positive">+1.24%</div>
+                    <span class="stock-status doubtful">Doubtful</span>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="market-overview">
+                <h3>MARKET TODAY</h3>
+                <div>
+                    <p>NSE: 25,123.85 <span class="positive">+154.70</span></p>
+                    <p>BSE: 41,258.70 <span class="positive">+287.25</span></p>
+                </div>
+            </div>
+            <!-- Add more sidebar content here -->
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SOCIAL LINKS</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>NEWSLETTER</h3>
+            <input type="email" placeholder="Your Email">
+        </div>
+    </footer>
+</body>
+</html>

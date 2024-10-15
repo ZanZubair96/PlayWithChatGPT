@@ -1,0 +1,62 @@
+.finance-tab {
+  padding: 20px;
+}
+
+.finance-summary {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.finance-summary h3 {
+  margin-top: 0;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.transaction-list {
+  margin-bottom: 30px;
+}
+
+.transaction-list h3 {
+  margin-top: 0;
+}
+
+.transaction-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item.expense { color: #dc3545; }
+.transaction-item.income { color: #28a745; }
+
+.transaction-date, .transaction-category {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.finance-chart h3 {
+  margin-top: 0;
+}
