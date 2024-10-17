@@ -1,0 +1,50 @@
+.welcome-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-content {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.welcome-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.welcome-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.welcome-actions button:not(.logout-btn) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.welcome-actions button:not(.logout-btn):hover {
+  background-color: #45a049;
+}
+
+.logout-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://localhost:27017/shariastock",
+  "jwtSecret":"b3b2e677a0f8b809757ac4b369152c53dc9674cba1f8de16f90746985f7856ed917d4755c185c24714afa9aa29ae1e9a66f77bcdf608508ef2ba440c1c38bee5"
+}
